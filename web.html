@@ -1,11 +1,9 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>IronFit Gym</title>
+    <title>IRONFIT GYM | Transform Your Body</title>
 
     <style>
         * {
@@ -16,31 +14,22 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             background: #111;
             color: white;
-            line-height: 1.6;
         }
 
         /* NAVBAR */
-
-        header {
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            background: rgba(0, 0, 0, 0.95);
-            z-index: 1000;
-            border-bottom: 1px solid #333;
-        }
-
         nav {
-            max-width: 1200px;
-            margin: auto;
-            padding: 18px 30px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.95);
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 18px 8%;
         }
 
         .logo {
@@ -49,45 +38,31 @@
             color: #ff3c00;
         }
 
-        .logo span {
-            color: white;
-        }
-
         nav ul {
             display: flex;
             list-style: none;
             gap: 30px;
         }
 
-        nav ul li a {
+        nav a {
             color: white;
             text-decoration: none;
-            font-size: 16px;
-            transition: 0.3s;
+            font-weight: bold;
         }
 
-        nav ul li a:hover {
+        nav a:hover {
             color: #ff3c00;
         }
 
-        .menu-btn {
-            display: none;
-            font-size: 28px;
-            cursor: pointer;
-        }
-
         /* HERO */
-
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 100px 20px 50px;
+            padding: 100px 8%;
 
             background:
-                linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+                linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.75)),
                 url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=80");
 
             background-size: cover;
@@ -95,13 +70,13 @@
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 650px;
         }
 
         .hero h1 {
-            font-size: 60px;
+            font-size: 65px;
+            line-height: 1.1;
             margin-bottom: 20px;
-            text-transform: uppercase;
         }
 
         .hero h1 span {
@@ -119,26 +94,21 @@
             padding: 14px 30px;
             background: #ff3c00;
             color: white;
-            text-decoration: none;
+            border: none;
             border-radius: 5px;
+            text-decoration: none;
             font-weight: bold;
-            transition: 0.3s;
+            cursor: pointer;
         }
 
         .btn:hover {
-            background: #d93200;
-            transform: translateY(-3px);
+            background: white;
+            color: black;
         }
 
         /* COMMON */
-
         section {
-            padding: 90px 30px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
+            padding: 90px 8%;
         }
 
         .section-title {
@@ -147,8 +117,7 @@
         }
 
         .section-title h2 {
-            font-size: 40px;
-            text-transform: uppercase;
+            font-size: 42px;
         }
 
         .section-title span {
@@ -160,27 +129,62 @@
             margin-top: 10px;
         }
 
-        /* ABOUT */
-
-        .about {
+        /* SERVICES */
+        .services {
             background: #181818;
         }
 
-        .about-content {
+        .service-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: #222;
+            padding: 35px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #ff3c00;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #bbb;
+        }
+
+        /* ABOUT */
+        .about {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
             align-items: center;
         }
 
-        .about-image img {
+        .about-img img {
             width: 100%;
             border-radius: 10px;
         }
 
-        .about-text h3 {
-            font-size: 30px;
+        .about-text h2 {
+            font-size: 42px;
             margin-bottom: 20px;
+        }
+
+        .about-text span {
+            color: #ff3c00;
         }
 
         .about-text p {
@@ -188,21 +192,566 @@
             margin-bottom: 20px;
         }
 
-        .features {
+        .about-list {
             list-style: none;
             margin-bottom: 25px;
         }
 
-        .features li {
-            margin: 12px 0;
+        .about-list li {
+            margin: 10px 0;
         }
 
-        .features li::before {
+        .about-list li::before {
             content: "✓";
             color: #ff3c00;
-            font-weight: bold;
             margin-right: 10px;
         }
 
-        /* SERVICES */
-```
+        /* PLANS */
+        .plans {
+            background: #181818;
+        }
+
+        .plan-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .plan {
+            background: #222;
+            padding: 35px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .plan.featured {
+            border: 2px solid #ff3c00;
+        }
+
+        .plan h3 {
+            color: #ff3c00;
+            font-size: 25px;
+        }
+
+        .price {
+            font-size: 40px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .price small {
+            font-size: 15px;
+            color: #aaa;
+        }
+
+        .plan ul {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .plan li {
+            padding: 8px;
+            color: #bbb;
+        }
+
+        /* TRAINERS */
+        .trainer-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .trainer {
+            background: #222;
+            text-align: center;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .trainer img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .trainer-info {
+            padding: 20px;
+        }
+
+        .trainer-info h3 {
+            color: #ff3c00;
+        }
+
+        .trainer-info p {
+            color: #aaa;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: #181818;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            color: #bbb;
+            margin: 15px 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input,
+        textarea {
+            padding: 15px;
+            background: #292929;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #080808;
+            text-align: center;
+            padding: 30px;
+            color: #888;
+        }
+
+        footer span {
+            color: #ff3c00;
+        }
+
+        /* MOBILE */
+        @media (max-width: 900px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .service-container,
+            .plan-container,
+            .trainer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .about,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">IRONFIT</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#plans">Plans</a></li>
+            <li><a href="#trainers">Trainers</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                BUILD YOUR
+                <span>STRONGEST</span>
+                SELF
+            </h1>
+
+            <p>
+                Push your limits. Build your strength.
+                Transform your body and become the best version of yourself.
+            </p>
+
+            <a href="#plans" class="btn">JOIN NOW</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+
+        <div class="section-title">
+
+            <h2>OUR <span>SERVICES</span></h2>
+
+            <p>
+                Everything you need to reach your fitness goals.
+            </p>
+
+        </div>
+
+        <div class="service-container">
+
+            <div class="service-card">
+                <div class="service-icon">🏋️</div>
+                <h3>Strength Training</h3>
+                <p>
+                    Build muscle and increase your strength
+                    with professional equipment.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🏃</div>
+                <h3>Cardio Training</h3>
+                <p>
+                    Improve your stamina and cardiovascular health.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🥗</div>
+                <h3>Nutrition Plan</h3>
+                <p>
+                    Get nutrition guidance to support your fitness journey.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div class="about-img">
+
+            <img
+                src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1000&q=80"
+                alt="Gym">
+
+        </div>
+
+        <div class="about-text">
+
+            <h2>
+                WHY CHOOSE <span>IRONFIT?</span>
+            </h2>
+
+            <p>
+                IRONFIT is a modern fitness center designed
+                for people who are serious about fitness.
+            </p>
+
+            <ul class="about-list">
+                <li>Modern gym equipment</li>
+                <li>Professional trainers</li>
+                <li>Personal training</li>
+                <li>Clean environment</li>
+                <li>Flexible membership plans</li>
+            </ul>
+
+            <a href="#contact" class="btn">
+                CONTACT US
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- PLANS -->
+    <section class="plans" id="plans">
+
+        <div class="section-title">
+
+            <h2>
+                MEMBERSHIP <span>PLANS</span>
+            </h2>
+
+            <p>
+                Choose your fitness plan.
+            </p>
+
+        </div>
+
+        <div class="plan-container">
+
+            <div class="plan">
+
+                <h3>BASIC</h3>
+
+                <div class="price">
+                    ₹999
+                    <small>/month</small>
+                </div>
+
+                <ul>
+                    <li>✓ Gym Access</li>
+                    <li>✓ Cardio Equipment</li>
+                    <li>✓ Locker Facility</li>
+                </ul>
+
+                <button class="btn" onclick="joinPlan('Basic')">
+                    JOIN NOW
+                </button>
+
+            </div>
+
+
+            <div class="plan featured">
+
+                <h3>PREMIUM</h3>
+
+                <div class="price">
+                    ₹1,999
+                    <small>/month</small>
+                </div>
+
+                <ul>
+                    <li>✓ Unlimited Gym Access</li>
+                    <li>✓ Cardio Equipment</li>
+                    <li>✓ Locker Facility</li>
+                    <li>✓ Personal Trainer</li>
+                </ul>
+
+                <button class="btn" onclick="joinPlan('Premium')">
+                    JOIN NOW
+                </button>
+
+            </div>
+
+
+            <div class="plan">
+
+                <h3>PRO</h3>
+
+                <div class="price">
+                    ₹2,999
+                    <small>/month</small>
+                </div>
+
+                <ul>
+                    <li>✓ Unlimited Gym Access</li>
+                    <li>✓ Personal Trainer</li>
+                    <li>✓ Diet Plan</li>
+                    <li>✓ Fitness Assessment</li>
+                </ul>
+
+                <button class="btn" onclick="joinPlan('Pro')">
+                    JOIN NOW
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TRAINERS -->
+    <section id="trainers">
+
+        <div class="section-title">
+
+            <h2>
+                OUR <span>TRAINERS</span>
+            </h2>
+
+        </div>
+
+        <div class="trainer-container">
+
+            <div class="trainer">
+
+                <img
+                    src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=800&q=80"
+                    alt="Trainer">
+
+                <div class="trainer-info">
+                    <h3>Rahul Sharma</h3>
+                    <p>Strength Coach</p>
+                </div>
+
+            </div>
+
+
+            <div class="trainer">
+
+                <img
+                    src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80"
+                    alt="Trainer">
+
+                <div class="trainer-info">
+                    <h3>Priya Patil</h3>
+                    <p>Fitness Coach</p>
+                </div>
+
+            </div>
+
+
+            <div class="trainer">
+
+                <img
+                    src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80"
+                    alt="Trainer">
+
+                <div class="trainer-info">
+                    <h3>Akash Verma</h3>
+                    <p>Personal Trainer</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <div class="section-title">
+
+            <h2>
+                CONTACT <span>US</span>
+            </h2>
+
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+
+                <h3>Visit IRONFIT</h3>
+
+                <p>📍 Pune, Maharashtra, India</p>
+                <p>📞 +91 98765 43210</p>
+                <p>📧 info@ironfitgym.com</p>
+                <p>🕐 Monday - Sunday: 5 AM - 11 PM</p>
+
+            </div>
+
+
+            <form onsubmit="sendMessage(event)">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    required>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Your Phone"
+                    required>
+
+                <textarea
+                    id="message"
+                    placeholder="Your Message"
+                    required></textarea>
+
+                <button class="btn" type="submit">
+                    SEND MESSAGE
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 <span>IRONFIT GYM</span>.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function joinPlan(plan) {
+
+            alert(
+                "Thank you for choosing " +
+                plan +
+                " Membership!"
+            );
+
+            document
+                .getElementById("contact")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+        }
+
+
+        function sendMessage(event) {
+
+            event.preventDefault();
+
+            const name =
+                document.getElementById("name").value;
+
+            alert(
+                "Thank you " +
+                name +
+                "! Your message has been submitted."
+            );
+
+            event.target.reset();
+        }
+
+    </script>
+
+</body>
+</html>
